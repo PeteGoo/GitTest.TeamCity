@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e801ddee-2d6f-48b4-b9cc-9033dc164b06" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
   <name>Git Test</name>
-  <parameters />
+  <parameters>
+    <param name="thesecrets" value="zxxaabce22cf90ccaef94dcfbc3959c8f2a7d65dd729cfbe430" spec="password label='Secret Thing' display='normal'" />
+  </parameters>
   <cleanup />
 </project>
 
