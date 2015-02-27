@@ -15,6 +15,7 @@
         <state type="buildBroken" enabled="false" />
       </states>
       <build-types enabled-for-all="true" enabled-for-subprojects="false" />
+      <content iconUrl="http://my.url.com/my-icon.png" botName="TeamCity2" maxCommitsToDisplay="20" showBuildAgent="true" showElapsedBuildTime="true" showCommits="true" showCommitters="true" />
     </slackNotification>
   </slackNotifications>
 </settings>
