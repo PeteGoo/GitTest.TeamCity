@@ -23,6 +23,8 @@ if [ "$theTruth" = true ]; then
   echo "##teamcity[testStdErr name='className.testName' out='error text']"
   echo "##teamcity[testFailed name='className.testName' message='failure message' details='message and stack trace']"
   echo "##teamcity[testFinished name='className.testName' duration='50']"
+  echo "##teamcity[testStarted name='className.testName2']"
+  echo "##teamcity[testFinished name='className.testName2' duration='50']"
   echo "##teamcity[testSuiteFinished name='test suite 1']"
 
 else
@@ -37,6 +39,8 @@ else
   echo "##teamcity[testStdOut name='className.testName' out='text']"
   echo "##teamcity[testStdErr name='className.testName' out='error text']"
   echo "##teamcity[testFinished name='className.testName' duration='50']"
+  echo "##teamcity[testStarted name='className.testName2']"
+  echo "##teamcity[testFinished name='className.testName2' duration='50']"
   echo "##teamcity[testSuiteFinished name='test suite 1']"
 
 fi]]></param>
