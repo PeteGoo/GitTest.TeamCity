@@ -11,7 +11,34 @@
         <parameters>
           <param name="script.content"><![CDATA[theTruth=%ForceFailure%
 if [ "$theTruth" = true ]; then
-  exit 1
+  echo "##teamcity[compilationStarted compiler='fake compiler']"
+  echo "##teamcity[message text='compiler step 1']"
+  echo "##teamcity[message text='compiler step 2 failed so bad'] status='ERROR'"
+  echo "##teamcity[message text='compiler step 3']"
+  echo "##teamcity[compilationFinished compiler='fake compiler']"
+
+  echo "##teamcity[testSuiteStarted name='test suite 1']"
+  echo "##teamcity[testStarted name='className.testName']"
+  echo "##teamcity[testStdOut name='className.testName' out='text']"
+  echo "##teamcity[testStdErr name='className.testName' out='error text']"
+  echo "##teamcity[testFailed name='className.testName' message='failure message' details='message and stack trace']"
+  echo "##teamcity[testFinished name='className.testName' duration='50']"
+  echo "##teamcity[testSuiteFinished name='test suite 1']"
+
+else
+  echo "##teamcity[compilationStarted compiler='fake compiler']"
+  echo "##teamcity[message text='compiler step 1']"
+  echo "##teamcity[message text='compiler step 2'] status='WARNING'"
+  echo "##teamcity[message text='compiler step 3']"
+  echo "##teamcity[compilationFinished compiler='fake compiler']"
+
+  echo "##teamcity[testSuiteStarted name='test suite 1']"
+  echo "##teamcity[testStarted name='className.testName']"
+  echo "##teamcity[testStdOut name='className.testName' out='text']"
+  echo "##teamcity[testStdErr name='className.testName' out='error text']"
+  echo "##teamcity[testFinished name='className.testName' duration='50']"
+  echo "##teamcity[testSuiteFinished name='test suite 1']"
+
 fi]]></param>
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
