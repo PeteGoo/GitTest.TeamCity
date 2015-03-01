@@ -15,7 +15,7 @@
         <state type="buildInterrupted" enabled="false" />
       </states>
       <build-types enabled-for-all="true" enabled-for-subprojects="false" />
-      <content iconUrl="https://raw.githubusercontent.com/PeteGoo/tcSlackBuildNotifier/master/docs/TeamCity32.png" botName="TeamCity" maxCommitsToDisplay="5" showBuildAgent="false" showElapsedBuildTime="false" showCommits="true" showCommitters="true" showFailureReason="true" />
+      <content iconUrl="https://raw.githubusercontent.com/PeteGoo/tcSlackBuildNotifier/master/docs/TeamCity32.png" botName="TeamCity" maxCommitsToDisplay="5" showBuildAgent="false" showElapsedBuildTime="true" showCommits="true" showCommitters="true" showFailureReason="true" />
     </slackNotification>
   </slackNotifications>
 </settings>
