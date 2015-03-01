@@ -4,15 +4,15 @@
   <slackNotifications enabled="true">
     <slackNotification channel="#general" enabled="true" mention-channel-enabled="true" mention-slack-user-enabled="true">
       <states>
-        <state type="buildStarted" enabled="true" />
-        <state type="buildSuccessful" enabled="true" />
-        <state type="buildInterrupted" enabled="false" />
         <state type="beforeBuildFinish" enabled="false" />
         <state type="buildFailed" enabled="true" />
-        <state type="buildBroken" enabled="false" />
-        <state type="buildFixed" enabled="false" />
         <state type="responsibilityChanged" enabled="false" />
+        <state type="buildBroken" enabled="false" />
         <state type="buildFinished" enabled="true" />
+        <state type="buildStarted" enabled="true" />
+        <state type="buildSuccessful" enabled="true" />
+        <state type="buildFixed" enabled="false" />
+        <state type="buildInterrupted" enabled="false" />
       </states>
       <build-types enabled-for-all="true" enabled-for-subprojects="false" />
       <content iconUrl="https://raw.githubusercontent.com/PeteGoo/tcSlackBuildNotifier/master/docs/TeamCity32.png" botName="TeamCity" maxCommitsToDisplay="5" showBuildAgent="false" showElapsedBuildTime="false" showCommits="true" showCommitters="true" showFailureReason="true" />
